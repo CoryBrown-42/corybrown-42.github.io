@@ -99,7 +99,7 @@ ul li {
 }
 .space
 {
-	margin-top:60px;	
+	margin-top:60px;
 }
 /* ------------------------------------------------------------------------------
 	Header
@@ -194,7 +194,7 @@ ul li {
 	transition-property: transform;
 }
 .nav-toggle:before {
-	background-color: #4b1685;
+	background-color: #00a33b;
 	-moz-transform: scale(1);
 	-ms-transform: scale(1);
 	-webkit-transform: scale(1);
@@ -205,7 +205,7 @@ ul li {
 	transition-duration: 0.3s;
 }
 .nav-toggle:after {
-	background-color: #4b1685;
+	background-color: #00a33b;
 	-moz-transform: scale(0);
 	-ms-transform: scale(0);
 	-webkit-transform: scale(0);
@@ -298,7 +298,7 @@ ul li {
 -------------------------------------------------------------------------------*/
 
 .banner {
-	background-color: #65349c;
+	background-color: #00a33b;
 	min-height: 750px;
 }
 .banner-text {
@@ -343,10 +343,10 @@ ul li {
   .work img
   {
 	width:100%;
-	height:100%;  
+	height:100%;
   }
   .work .overlay {
-    background: rgba(64, 35, 97, 0.9);
+    background: rgba(0, 0, 0, 0.5);
     height: 100%;
     left: 0;
     opacity: 0;
@@ -400,7 +400,7 @@ ul li {
     -ms-transform: translate3d(0, 0, 0);
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); }
-	
+
 	/* ------------------------------------------------------------------------------
 	Work animation
 -------------------------------------------------------------------------------*/
@@ -439,7 +439,7 @@ ul li {
 
 .animated {
   visibility: visible; }
-  
+
 /* ------------------------------------------------------------------------------
 	Hire me
 -------------------------------------------------------------------------------*/
@@ -503,7 +503,7 @@ ul li {
 	font-size: 11px;
 	margin: 0 2px;
 }
-  
+
 /* ------------------------------------------------------------------------------
 	Inner Page Banner
 -------------------------------------------------------------------------------*/
@@ -546,7 +546,7 @@ ul li {
 {
 width:150px;
 height:150px;
-border-radius:50%;	
+border-radius:50%;
 }
 
 
@@ -555,7 +555,7 @@ border-radius:50%;
 -------------------------------------------------------------------------------*/
 .conForm
 {
-margin-top:50px;	
+margin-top:50px;
 }
 .conForm input {
 	background:#fafafa;
