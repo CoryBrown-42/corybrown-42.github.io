@@ -47,7 +47,7 @@ $address = "corybrown304@gmail.com";
 
 // Example, $e_subject = '$name . ' has contacted you via Your Website.';
 
-$e_subject = 'You have been contacted by ' . $name . '.';
+$e_subject = '' . $name . ' has requested your services.';
 
 
 // Configuration option.
