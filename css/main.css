@@ -194,7 +194,7 @@ ul li {
 	transition-property: transform;
 }
 .nav-toggle:before {
-	background-color: #00a33b;
+	background-image: url("../images/bg.png");
 	-moz-transform: scale(1);
 	-ms-transform: scale(1);
 	-webkit-transform: scale(1);
@@ -205,7 +205,7 @@ ul li {
 	transition-duration: 0.3s;
 }
 .nav-toggle:after {
-	background-color: #00a33b;
+	background-color: #ff1000;
 	-moz-transform: scale(0);
 	-ms-transform: scale(0);
 	-webkit-transform: scale(0);
@@ -298,7 +298,7 @@ ul li {
 -------------------------------------------------------------------------------*/
 
 .banner {
-	background-color: #00a33b;
+	background-image: url("../images/bg.png");
 	min-height: 750px;
 }
 .banner-text {
@@ -509,7 +509,7 @@ ul li {
 -------------------------------------------------------------------------------*/
 
 .innerbanner {
-	background-color: #00a33b;
+	background-image: url("../images/bg.png");
 	min-height: 100%;
 }
 .innerbanner-text {
