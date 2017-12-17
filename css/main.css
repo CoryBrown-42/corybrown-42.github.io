@@ -133,12 +133,12 @@ ul li {
 	top: 18px;
 }
 .navigation.open {
-	opacity: 0.9;
+	opacity: .9;
 	visibility: visible;
 	-moz-transition: opacity 0.5s;
 	-o-transition: opacity 0.5s;
 	-webkit-transition: opacity 0.5s;
-	transition: opacity 0.5s;
+	transition: opacity 0.7s;
 }
 .navigation {
 	float: right;
