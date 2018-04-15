@@ -24,7 +24,7 @@
 <section class="innerbanner" role="banner">
   <header id="header">
     <!-- navigation section  -->
-    <div class="header-content clearfix"> <a class="logo" href="index.php"><img src="images/logo2.png" alt="Mafolio" style="height:40px;"></a>
+    <div class="header-content clearfix"> <a class="logo" href="index.php"><img src="images/logo2.png" alt="Logo" style="height:40px;"></a>
       <nav class="navigation" role="navigation">
         <ul class="primary-nav">
           <li><a href="about.php">IRL</a></li>
