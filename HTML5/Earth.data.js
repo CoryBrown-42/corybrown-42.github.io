@@ -1,7 +1,5 @@
 
-var Module;
-
-if (typeof Module === 'undefined') Module = eval('(function() { try { return Module || {} } catch(e) { return {} } })()');
+var Module = typeof Module !== 'undefined' ? Module : {};
 
 if (!Module.expectedDataFileDownloads) {
   Module.expectedDataFileDownloads = 0;
@@ -24,11 +22,9 @@ Module.expectedDataFileDownloads++;
     var REMOTE_PACKAGE_BASE = 'Earth.data';
     if (typeof Module['locateFilePackage'] === 'function' && !Module['locateFile']) {
       Module['locateFile'] = Module['locateFilePackage'];
-      Module.printErr('warning: you defined Module.locateFilePackage, that has been renamed to Module.locateFile (using your locateFilePackage for now)');
+      err('warning: you defined Module.locateFilePackage, that has been renamed to Module.locateFile (using your locateFilePackage for now)');
     }
-    var REMOTE_PACKAGE_NAME = typeof Module['locateFile'] === 'function' ?
-                              Module['locateFile'](REMOTE_PACKAGE_BASE) :
-                              ((Module['filePackagePrefixURL'] || '') + REMOTE_PACKAGE_BASE);
+    var REMOTE_PACKAGE_NAME = Module['locateFile'] ? Module['locateFile'](REMOTE_PACKAGE_BASE, '') : REMOTE_PACKAGE_BASE;
   
     var REMOTE_PACKAGE_SIZE = metadata.remote_package_size;
     var PACKAGE_UUID = metadata.package_uuid;
@@ -106,10 +102,9 @@ Module['FS_createPath']('/', 'Earth', true, true);
 Module['FS_createPath']('/Earth', 'Content', true, true);
 Module['FS_createPath']('/Earth/Content', 'Paks', true, true);
 
-    function DataRequest(start, end, crunched, audio) {
+    function DataRequest(start, end, audio) {
       this.start = start;
       this.end = end;
-      this.crunched = crunched;
       this.audio = audio;
     }
     DataRequest.prototype = {
@@ -122,9 +117,7 @@ Module['FS_createPath']('/Earth/Content', 'Paks', true, true);
       send: function() {},
       onload: function() {
         var byteArray = this.byteArray.subarray(this.start, this.end);
-
-          this.finish(byteArray);
-
+        this.finish(byteArray);
       },
       finish: function(byteArray) {
         var that = this;
@@ -138,7 +131,7 @@ Module['FS_createPath']('/Earth/Content', 'Paks', true, true);
 
         var files = metadata.files;
         for (var i = 0; i < files.length; ++i) {
-          new DataRequest(files[i].start, files[i].end, files[i].crunched, files[i].audio).open('GET', files[i].filename);
+          new DataRequest(files[i].start, files[i].end, files[i].audio).open('GET', files[i].filename);
         }
 
   
@@ -180,6 +173,6 @@ Module['FS_createPath']('/Earth/Content', 'Paks', true, true);
   }
 
  }
- loadPackage({"files": [{"audio": 0, "start": 0, "crunched": 0, "end": 53, "filename": "/Manifest_NonUFSFiles_HTML5.txt"}, {"audio": 0, "start": 53, "crunched": 0, "end": 83, "filename": "/UE4CommandLine.txt"}, {"audio": 0, "start": 83, "crunched": 0, "end": 70421670, "filename": "/Earth/Content/Paks/Earth-HTML5.pak"}], "remote_package_size": 70421670, "package_uuid": "0b29d64f-d959-4ee7-b3fd-a51050f3772f"});
+ loadPackage({"files": [{"start": 0, "audio": 0, "end": 53, "filename": "/Manifest_NonUFSFiles_HTML5.txt"}, {"start": 53, "audio": 0, "end": 83, "filename": "/UE4CommandLine.txt"}, {"start": 83, "audio": 0, "end": 104700765, "filename": "/Earth/Content/Paks/Earth-HTML5.pak"}], "remote_package_size": 104700765, "package_uuid": "c7e9dd3e-98d6-47b3-bb8d-ef1282085ee8"});
 
 })();
